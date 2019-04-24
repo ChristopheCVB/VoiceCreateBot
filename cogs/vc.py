@@ -95,7 +95,7 @@ class vc(commands.Cog):
         await ctx.channel.send(embed=embed)
 
     @commands.group()
-    async def voice(self, ctx):
+    async def vc(self, ctx):
         pass
 
     @vc.command()
@@ -312,4 +312,4 @@ class vc(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(voice(bot))
+    bot.add_cog(vc(bot))
