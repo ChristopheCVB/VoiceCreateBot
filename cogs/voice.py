@@ -13,7 +13,7 @@ from discord.ext.commands.cooldowns import BucketType
 from time import gmtime, strftime
 
 
-class voice(commands.Cog):
+class vc(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -98,7 +98,7 @@ class voice(commands.Cog):
     async def voice(self, ctx):
         pass
 
-    @voice.command()
+    @vc.command()
     async def setup(self, ctx):
         conn = sqlite3.connect('voice.db')
         c = conn.cursor()
@@ -158,7 +158,7 @@ class voice(commands.Cog):
     async def info_error(self, ctx, error):
         print(error)
 
-    @voice.command()
+    @vc.command()
     async def lock(self, ctx):
         conn = sqlite3.connect('voice.db')
         c = conn.cursor()
@@ -176,7 +176,7 @@ class voice(commands.Cog):
         conn.commit()
         conn.close()
 
-    @voice.command()
+    @vc.command()
     async def unlock(self, ctx):
         conn = sqlite3.connect('voice.db')
         c = conn.cursor()
@@ -194,7 +194,7 @@ class voice(commands.Cog):
         conn.commit()
         conn.close()
 
-    @voice.command(aliases=["allow"])
+    @vc.command(aliases=["allow"])
     async def permit(self, ctx, member : discord.Member):
         conn = sqlite3.connect('voice.db')
         c = conn.cursor()
@@ -211,7 +211,7 @@ class voice(commands.Cog):
         conn.commit()
         conn.close()
 
-    @voice.command(aliases=["deny"])
+    @vc.command(aliases=["deny"])
     async def reject(self, ctx, member : discord.Member):
         conn = sqlite3.connect('voice.db')
         c = conn.cursor()
@@ -237,7 +237,7 @@ class voice(commands.Cog):
 
 
 
-    @voice.command()
+    @vc.command()
     async def limit(self, ctx, limit):
         conn = sqlite3.connect('voice.db')
         c = conn.cursor()
@@ -261,7 +261,7 @@ class voice(commands.Cog):
         conn.close()
 
 
-    @voice.command()
+    @vc.command()
     async def name(self, ctx,*, name):
         conn = sqlite3.connect('voice.db')
         c = conn.cursor()
@@ -284,7 +284,7 @@ class voice(commands.Cog):
         conn.commit()
         conn.close()
 
-    @voice.command()
+    @vc.command()
     async def claim(self, ctx):
         x = False
         conn = sqlite3.connect('voice.db')
