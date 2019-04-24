@@ -11,7 +11,7 @@ import sys
 
 client = discord.Client()
 
-bot = commands.Bot(command_prefix="!vc")
+bot = commands.Bot(command_prefix=".")
 bot.remove_command("help")
 DISCORD_TOKEN = 'NTY1MTAxNTY2MzI4MzA3NzEy.XMBj8A.96dIAkMmM45t5n5h-hFcQxmjO7g'
 
