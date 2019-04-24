@@ -15,7 +15,7 @@ bot = commands.Bot(command_prefix=".")
 bot.remove_command("help")
 DISCORD_TOKEN = 'NTY1MTAxNTY2MzI4MzA3NzEy.XMBj8A.96dIAkMmM45t5n5h-hFcQxmjO7g'
 
-initial_extensions = ['cogs.voice']
+initial_extensions = ['cogs.vc']
 
 if __name__ == '__main__':
     for extension in initial_extensions:
