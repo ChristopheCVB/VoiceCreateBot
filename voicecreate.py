@@ -11,9 +11,9 @@ import sys
 
 client = discord.Client()
 
-bot = commands.Bot(command_prefix=".")
+bot = commands.Bot(command_prefix="!vc")
 bot.remove_command("help")
-DISCORD_TOKEN = 'Enter Discord Token here'
+DISCORD_TOKEN = 'NTY1MTAxNTY2MzI4MzA3NzEy.XMBj8A.96dIAkMmM45t5n5h-hFcQxmjO7g'
 
 initial_extensions = ['cogs.voice']
 
